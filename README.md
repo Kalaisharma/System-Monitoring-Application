@@ -4,13 +4,13 @@
 
 ## 📌 Overview
 
-This project implements a **system monitoring solution** consisting of:
+This project implements a **system monitoring solution** consisting of
 
 1. **System Utility (Client)** – A lightweight Go-based cross-platform utility to collect system health data.
 2. **Backend Server (API + Storage)** – Node.js/Express + MongoDB backend to receive, store, and serve machine data.
 3. **Admin Dashboard (Frontend)** – React + Material UI dashboard to visualize and filter machine health reports.
 
-The system is designed to be:
+The system is designed to be
 
 * ✅ Cross-platform (Windows / macOS / Linux)
 * ✅ Efficient (background daemon, minimal resource usage)
@@ -23,13 +23,13 @@ The system is designed to be:
 
 ### 1. System Utility (Go)
 
-* Collects:
+* Collects
 
   * 🔒 Disk encryption status
   * 📦 OS update status (current vs latest)
   * 🛡️ Antivirus presence and status
   * ⏱️ Inactivity sleep settings (≤ 10 mins)
-* Runs as a background daemon:
+* Runs as a background daemon
 
   * Checks system every **15 minutes**
   * Reports only if changes detected
@@ -37,12 +37,12 @@ The system is designed to be:
 
 ### 2. Backend Server (Node.js + MongoDB)
 
-* REST APIs:
+* REST APIs
 
   * `POST /api/machines` → Receive machine data
-  * `GET /api/machines` → List all machines (with filters: OS, status, issues)
+  * `GET /api/machines` → List all machines (with filters OS, status, issues)
   * `GET /api/machines/export` → Export all machines as CSV
-* Stores:
+* Stores
 
   * Machine ID
   * OS, Status, Issues, Details
@@ -50,7 +50,7 @@ The system is designed to be:
 
 ### 3. Admin Dashboard (React + Material UI)
 
-* Displays:
+* Displays
 
 * Machine ID, OS, Status, Issues, Last check-in
 * Filters by OS, Status, Issue
@@ -91,7 +91,7 @@ npm install
 
 #### Configure Environment
 
-Create `.env` file:
+Create `.env` file
 
 ```env
 PORT=5000
@@ -118,7 +118,7 @@ npm install
 
 #### Configure API Endpoint
 
-Edit `frontend/src/services/machineServices.ts`:
+Edit `frontend/src/services/machineServices.ts`
 
 ```ts
 const BASE_URL = "http://localhost:5000/api/machines";
@@ -174,7 +174,7 @@ Submit machine data.
 
 ### `GET /api/machines`
 
-Fetch list of machines (supports filters):
+Fetch list of machines (supports filters)
 
 ```
 /api/machines?os=Windows&status=Warning&issue=Disk%20Encryption%20Disabled
