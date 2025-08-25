@@ -163,7 +163,7 @@ Submit machine data.
 {
   "MachineID": "M123",
   "OSName": "Windows",
-  "DiskEncrypted: true,
+  "DiskEncrypted": true,
   "OSUpToDate": false,
   "SleepOK": true,
   "Antivirus" :true
